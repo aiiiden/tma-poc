@@ -1,5 +1,6 @@
 'use client';
 
+import { ErudaProvider } from './eruda-provider';
 import { ReactQueryProvider } from './react-query-provider';
 import { RecoilProvider } from './recoil';
 
@@ -9,8 +10,10 @@ export function ClientSideProvider({
   children: React.ReactNode;
 }) {
   return (
-    <ReactQueryProvider>
-      <RecoilProvider>{children}</RecoilProvider>
-    </ReactQueryProvider>
+    <ErudaProvider>
+      <ReactQueryProvider>
+        <RecoilProvider>{children}</RecoilProvider>
+      </ReactQueryProvider>
+    </ErudaProvider>
   );
 }
