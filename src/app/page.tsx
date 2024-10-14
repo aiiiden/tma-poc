@@ -1,44 +1,18 @@
-import Link from 'next/link';
+'use client';
 
-import { buttonVariants } from '@/components/ui/button';
+import { useLaunchParams } from '@telegram-apps/sdk-react';
 
-function GithubIcon() {
-  return (
-    <svg
-      className="w-6 h-6"
-      role="img"
-      viewBox="0 0 24 24"
-      fill="white"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>GitHub</title>
-      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-    </svg>
-  );
-}
-
+//http://localhost:3000/#tgWebAppData=query_id%3DAAHzmDYSAAAAAPOYNhLFEsP9%26user%3D%257B%2522id%2522%253A305567987%252C%2522first_name%2522%253A%2522Aiden%2522%252C%2522last_name%2522%253A%2522%2522%252C%2522username%2522%253A%2522ai_iden%2522%252C%2522language_code%2522%253A%2522ko%2522%252C%2522is_premium%2522%253Atrue%252C%2522allows_write_to_pm%2522%253Atrue%257D%26auth_date%3D1728898907%26hash%3Da00c82d08f884f1f28f80317f35a4f8858320a3e6f41734c84f59ae6b2affb16&tgWebAppVersion=7.10&tgWebAppPlatform=macos&tgWebAppBotInline=1&tgWebAppThemeParams=%7B%22destructive_text_color%22%3A%22%23ef5b5b%22%2C%22header_bg_color%22%3A%22%23131415%22%2C%22text_color%22%3A%22%23ffffff%22%2C%22section_bg_color%22%3A%22%2318222d%22%2C%22hint_color%22%3A%22%23b1c3d5%22%2C%22bottom_bar_bg_color%22%3A%22%23213040%22%2C%22section_header_text_color%22%3A%22%23b1c3d5%22%2C%22section_separator_color%22%3A%22%23213040%22%2C%22subtitle_text_color%22%3A%22%23b1c3d5%22%2C%22button_color%22%3A%22%232ea6ff%22%2C%22secondary_bg_color%22%3A%22%23131415%22%2C%22bg_color%22%3A%22%2318222d%22%2C%22link_color%22%3A%22%2362bcf9%22%2C%22button_text_color%22%3A%22%23ffffff%22%2C%22accent_text_color%22%3A%22%232ea6ff%22%7D
 export default function Home() {
+  const params = useLaunchParams();
+
   return (
     <div>
       <header className="space-y-8 py-10 px-2 text-center">
-        <h1 className="text-2xl font-bold">IF LABS TEMPLATE</h1>
-        <p className="text-sm text-balance">
-          This is a template for creating a new project at IterateFast Labs.
-          <br />
-          Currently, it is based on Next.js and Tailwind CSS.
-        </p>
-        <Link
-          href="https://github.com/IterateFast-Labs/if-next-template"
-          target="_blank"
-          className={buttonVariants({
-            className: 'gap-2',
-          })}
-        >
-          <span>
-            <GithubIcon />
-          </span>
-          <span>Check out the github repo</span>
-        </Link>
+        <h1 className="text-2xl font-bold">TMA POC</h1>
+        <pre className="text-left text-[10px] p-4 bg-gray-200 rounded-lg overflow-x-auto">
+          {JSON.stringify(params, null, 2)}
+        </pre>
       </header>
     </div>
   );
