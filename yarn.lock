@@ -534,6 +534,15 @@
     "@telegram-apps/transformers" "^1.0.1"
     "@telegram-apps/types" "^1.0.1"
 
+"@telegram-apps/init-data-node@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@telegram-apps/init-data-node/-/init-data-node-1.1.1.tgz#da7b465a04589f6abaa1e4258e46996bbf99e4f6"
+  integrity sha512-Y+Nu1rwDE7gY3iTOUqoTzriHAj5jT93zq6REcW+nsKK/d8ct24y8AT12wtjw5AoTGLSO6Am4EXQuFuFcYa7B1w==
+  dependencies:
+    "@telegram-apps/toolkit" "^1.0.0"
+    "@telegram-apps/transformers" "^1.0.1"
+    "@telegram-apps/types" "^1.0.1"
+
 "@telegram-apps/navigation@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@telegram-apps/navigation/-/navigation-1.0.3.tgz#867a9f2c15c5d036a3521c4ff6120a8d1f0db129"

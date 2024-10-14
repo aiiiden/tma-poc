@@ -14,6 +14,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.56.2",
+    "@telegram-apps/init-data-node": "^1.1.1",
     "@telegram-apps/sdk": "^2.4.0",
     "@telegram-apps/sdk-react": "^2.0.5",
     "class-variance-authority": "^0.7.0",
