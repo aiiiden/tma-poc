@@ -16,12 +16,14 @@ export default function Home() {
           <pre
             role="button"
             onClick={() => {
-              navigator.clipboard.writeText(location.href);
-              alert('Copied to clipboard');
+              if (typeof location !== 'undefined') {
+                navigator.clipboard.writeText(location.href);
+                alert('Copied to clipboard');
+              }
             }}
             className="text-left text-[10px] p-4 bg-gray-200 rounded-lg overflow-x-auto"
           >
-            {location.href}
+            {typeof location !== 'undefined' && location.href}
           </pre>
         </div>
         <div className="p-4 border-t space-y-1">
