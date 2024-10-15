@@ -20,9 +20,9 @@ export default function Home() {
               size: 'sm',
               className: 'text-xs',
             })}
-            href={`http://localhost:3000/${location.hash}`}
+            href={location.href}
           >
-            Open Localhost
+            Open in browser
           </Link>
         )}
       </header>
