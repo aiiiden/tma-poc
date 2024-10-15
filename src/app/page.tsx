@@ -1,5 +1,8 @@
 'use client';
 
+import Link from 'next/link';
+
+import { buttonVariants } from '@/components/ui/button';
 import { useTelegram } from '@/lib/use-telegram';
 
 export default function Home() {
@@ -7,8 +10,23 @@ export default function Home() {
 
   return (
     <div>
-      <header className="space-y-8 py-6 px-2 text-center">
+      <header className="space-y-1 py-6 px-2 text-center">
         <h1 className="text-2xl font-bold">TMA POC</h1>
+        {tg.launchParams?.initDataRaw && (
+          <Link
+            target="_blank"
+            className={buttonVariants({
+              variant: 'outline',
+              size: 'sm',
+              className: 'text-xs',
+            })}
+            href={`http://localhost:3000/#tgWebAppData=${
+              tg.launchParams.initDataRaw
+            }`}
+          >
+            Open Localhost
+          </Link>
+        )}
       </header>
 
       <div className="p-3 border-y">
