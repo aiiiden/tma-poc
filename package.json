@@ -12,6 +12,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@grammyjs/auto-retry": "^2.0.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.56.2",
     "@telegram-apps/init-data-node": "^1.1.1",
