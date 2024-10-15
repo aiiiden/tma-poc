@@ -35,7 +35,7 @@ export function useTelegram() {
     const response = await fetch('/api/telegram', {
       method: 'POST',
       body: JSON.stringify({
-        raw: JSON.stringify(launchParams.current?.initDataRaw),
+        raw: launchParams.current?.initDataRaw,
       }),
     });
 
