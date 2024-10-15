@@ -20,7 +20,7 @@ export default function Home() {
               size: 'sm',
               className: 'text-xs',
             })}
-            href={`http://localhost:3000/#tgWebAppData=${encodeURIComponent(
+            href={`http://localhost:3000/#WebAppData=${encodeURIComponent(
               tg.launchParams.initDataRaw,
             )}`}
           >
