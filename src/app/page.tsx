@@ -1,8 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
-import { buttonVariants } from '@/components/ui/button';
 import { useTelegram } from '@/lib/use-telegram';
 
 export default function Home() {
