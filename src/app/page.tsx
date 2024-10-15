@@ -20,7 +20,7 @@ export default function Home() {
               size: 'sm',
               className: 'text-xs',
             })}
-            href={`http://localhost:3000/#tgWebAppData=${location.hash}`}
+            href={`http://localhost:3000/${location.hash}`}
           >
             Open Localhost
           </Link>
