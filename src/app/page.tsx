@@ -20,9 +20,9 @@ export default function Home() {
               size: 'sm',
               className: 'text-xs',
             })}
-            href={`http://localhost:3000/#tgWebAppData=${
-              tg.launchParams.initDataRaw
-            }`}
+            href={`http://localhost:3000/#tgWebAppData=${encodeURIComponent(
+              tg.launchParams.initDataRaw,
+            )}`}
           >
             Open Localhost
           </Link>
